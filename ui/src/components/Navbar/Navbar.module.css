@@ -1,0 +1,136 @@
+ 
+.navbar {
+  display: flex;
+  justify-content: space-between;
+  align-items:center;
+  border: 0.1em  solid rgb(228, 228, 228);
+  padding: 1rem 2rem;
+  width: 100%;
+  margin: 0 auto;
+  background-color: white;
+  max-height:80px;
+  
+  /* border-radius: 8px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1); */
+}
+
+
+.navbar-logo {
+  font-size: 1.5rem;
+  font-weight: bold;
+  color:rgb(37 99 235);
+  font-family: sans-serif;
+  padding-left: 16px;
+}
+
+.navbar-buttons {
+  display: flex;
+  align-items: left;
+  
+
+}
+
+.navbar-buttons button {
+  
+  border: none;
+  padding: 8px;
+  color: white;
+  font-size: 16px;
+  margin: 0 5px; /* Adjust margin between buttons as needed */
+  cursor: pointer;
+  border-radius: 8px;
+  text-decoration: none;
+  display: flex; /* Ensures button content aligns properly */
+  align-items: center; /* Centers content vertically */
+}
+
+ 
+  
+
+.navbar-user {
+  display: flex;
+  align-items: center;
+}
+
+.signout-icon {
+  font-size: 20px;
+  margin-right: 16px;
+  cursor: pointer;
+   
+}
+
+.user-dp {
+  width: 30px;
+  height: 30px;
+  border-radius: 50%;
+  border: 2px solid white;
+  cursor: pointer;
+  margin-right: 12px;
+}
+
+.modal {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.5);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 1000;
+}
+
+.modal-content {
+  background-color: rgba(0, 0, 0, 0);
+  padding: 20px;
+  border-radius: 10px;
+  width: 80%;
+  max-width: 500px;
+  position: relative;
+}
+
+.close {
+  position: absolute;
+  top: 0px;
+  right: -10px;
+  font-size: 40px;
+  cursor: pointer;
+  border-radius: 50%;
+  color: white;
+}
+
+
+.sideBySide {
+  display: flex;
+  justify-content: space-between;
+}
+
+.createPostContainer {
+  width: 60%; /* Adjust width as needed */
+}
+
+.feedbackContainer {
+  width: 35%; /* Adjust width as needed */
+  padding: 1rem;
+}
+
+
+.customDropdownContent {
+  margin-top: 15px;
+  width: 150px; /* Adjust this value to increase/decrease width */
+  margin-right: 15px;
+}
+
+.customDropdownContent > div {
+  width: 100%;
+  height: 100%;
+}
+
+.customDropdownItem {
+  padding: 10px 15px; /* Increase padding for larger click area */
+  font-size: 16px; /* Adjust font size if needed */
+  margin-left: 10px;
+}
+
+

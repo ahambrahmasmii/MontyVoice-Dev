@@ -1,0 +1,366 @@
+/* PostCreationForm.css
+@import url("https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;500;600;700&display=swap");
+@import url("https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css");
+
+.modalOverlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.5);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 1000;
+  font-family: "Montserrat", sans-serif;
+}
+
+.root {
+  padding: 20px;
+  width: 80%;
+  max-width: 800px;
+  background-color: #fff;
+  border-radius: 8px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  z-index: 1001;
+  position: relative;
+}
+
+h2 {
+  margin-bottom: 20px;
+  color: #333;
+  /* color: linear-gradient(to right, #5c6bc0, #512da8); */
+  /* color: #512da8;
+  text-align: center;
+}
+
+.formControl {
+  margin-bottom: 16px;
+  width: 100%;
+}
+
+.formControl label {
+  display: block;
+  margin-bottom: 8px;
+  font-weight: bold;
+  color: #555;
+}
+
+.formControl select,
+.formControl textarea {
+  width: 100%;
+  padding: 10px;
+  border: 1px solid #ddd;
+  border-radius: 4px;
+  font-size: 16px;
+  box-sizing: border-box;
+  font-family: "Montserrat", sans-serif;
+}
+.formControl input {
+  width: 50%;
+  padding: 10px;
+  border: 1px solid #ddd;
+  border-radius: 4px;
+  font-size: 16px;
+  box-sizing: border-box;
+  font-family: "Montserrat", sans-serif;
+}
+
+.textArea {
+  height: 300px;
+  resize: vertical;
+}
+
+.fileInput {
+  display: none;
+}
+
+.attachLabel {
+  display: flex;
+  align-items: center;
+  cursor: pointer;
+  color: #0073b1;
+  font-weight: bold;
+  margin-top: 8px;
+}
+
+.attachLabel svg {
+  margin-right: 8px;
+}
+
+.submitButton {
+  margin-top: 20px;
+  width: 100px;
+  background-color: #0073b1;
+  background: linear-gradient(to right, #7884d3, #704bc3);
+  color: white;
+  border: none;
+  padding: 10px 20px;
+  border-radius: 4px;
+  cursor: pointer;
+  font-size: 16px;
+}
+
+.submitButton:hover {
+  background-color: #005582;
+  background: linear-gradient(to right, #5c6bc0, #512da8);
+} */
+
+/* Flexbox for side-by-side layout */
+/* .flexRow {
+  display: flex;
+  justify-content: space-between;
+}
+
+.flexRow .formControl {
+  flex: 1;
+  margin-right: 10px;
+}
+
+.flexRow .formControl:last-child {
+  margin-right: 0;
+}  */
+
+
+
+@import url("https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;500;600;700&display=swap");
+@import url("https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css");
+
+.modalOverlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.5);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 1000;
+  font-family: "Montserrat", sans-serif;
+  font-size:1em;
+  font-weight: 600;
+  
+  
+}
+
+.root {
+  padding: 20px;
+  width: 80%;
+  max-width: 800px;
+  background-color: #fff;
+  border-radius: 8px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  z-index: 1001;
+  position: relative;
+}
+
+h2 {
+  margin-bottom: 20px;
+  color: navy; /* Maintain the gradient color scheme from Code - 1 */
+  text-align: left;
+  font-family: "Montserrat", sans-serif;
+  font-weight: 600;
+  margin-top: 0;
+   
+
+}
+
+.formControl {
+  margin-top: 20px;
+  margin-bottom: 16px;
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+}
+
+.formControl label {
+  display: block;
+  margin-bottom: 8px;
+  font-weight: bold;
+  color: #555;
+}
+
+.formControl select,
+.formControl textarea {
+  width: 100%;
+  padding: 10px;
+  border: 1px solid #ddd;
+  border-radius: 4px;
+  font-size: 16px;
+  box-sizing: border-box;
+  font-family: "Montserrat", sans-serif;
+}
+
+.formControl input {
+  width: 100%;
+  padding: 10px;
+  height: 43px;
+  border: 1px solid #ddd;
+  border-radius: 4px;
+  font-size: 16px;
+  box-sizing: border-box;
+  font-family: "Montserrat", sans-serif;
+}
+
+.textArea {
+  height: 100px;
+  resize: vertical;
+  width: 100%;
+}
+
+.fileInput {
+  display: none;
+}
+
+.attachContainer {
+  align-items: left;
+  margin-top: 40px;
+  margin-left: 10px;
+  display: flex;
+}
+
+.attachLabel {
+  cursor: pointer;
+  color: #0073b1;
+  font-weight: bold;
+  margin-left: 5px;
+  margin-bottom: 50px;
+  margin-top: 3px;
+}
+
+.attachLabel svg {
+  margin-right: 8px;
+  margin-bottom: 10px;
+}
+
+.attachText {
+  margin-left: 4px;
+  margin-bottom: 8px;
+}
+
+.submitButton {
+  margin-top: 20px;
+  width: 100px;
+  color: white;
+  border: none;
+  padding: 10px 20px;
+  border-radius: 4px;
+  cursor: pointer;
+  font-size: 16px;
+}
+
+.submitButtonContainer {
+  margin-top: 10px;
+  display: flex;
+  justify-content: flex-end;
+}
+
+.previewContainer {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+  margin-top: 10px;
+}
+
+.previewImage {
+  width: 200px;
+  height: 100px;
+  object-fit: cover;
+  border-radius: 4px;
+}
+
+.wrongIcon {
+  position: absolute;
+  top: 10px;
+  right: 10px;
+  width: 20px;
+  height: 20px;
+}
+
+.flexRow {
+  display: flex;
+  justify-content:space-between;
+   
+}
+
+.flexRow .formControl {
+  flex: 1;
+  margin-right: 10px;
+}
+
+.flexRow .formControl:last-child {
+  margin-right: 0;
+}
+
+
+
+.closeButton {
+  position: absolute;
+  top: 20px;
+  right: 20px;
+  cursor: pointer;
+  width: 20px; /* Adjust the size as needed */
+  height: 20px; /* Adjust the size as needed */
+}
+
+.successMessage {
+  color: green;
+  margin-top: 10px;
+  text-align: center;
+}
+
+/* .dropdown {
+  border: 1px solid #ccc;
+  max-height: 200px;
+  overflow-y: auto;
+  background: white;
+  width: 100%;
+  z-index: 1002;
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  border-radius: 8px;
+  top: 5px;
+}
+ 
+.dropdown li {
+  padding: 8px;
+  cursor: pointer;
+}
+ 
+.dropdown li:hover {
+  background: #f0f0f0;
+} */
+
+.formControl {
+  position: relative;
+}
+
+.dropdown {
+  position: absolute;
+  top: 100%;
+  left: 0;
+  right: 0;
+  background-color: white;
+  border: 1px solid #ccc;
+  border-top: none;
+  max-height: 150px;
+  overflow-y: auto;
+  z-index: 1000;
+}
+
+.dropdown li {
+  padding: 8px;
+  cursor: pointer;
+}
+
+.dropdown li:hover {
+  background-color: #f0f0f0;
+}
+
+.divider {
+  border-bottom: 1px solid #ddd;
+  margin: 0.5rem 0;
+}

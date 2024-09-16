@@ -1,0 +1,80 @@
+.post-composer-container {
+  display: flex;
+  align-items: center;
+  padding: 10px;
+  border: 1px solid #ddd;
+  border-radius: 8px;
+  background-color: #fff;
+  
+}
+
+.post-input {
+  flex: 1;
+}
+
+.input-and-button {
+  display: flex;
+  align-items: center;
+  cursor: pointer;
+}
+
+.input-container {
+  position: relative;
+  flex: 1;
+  /* margin-right: 10px;
+  display: flex;
+  align-items: center; */
+}
+
+.input-icon {
+  /* width: 24px;  
+  height: 24px;  
+  margin-right: 8px;   */
+  position: absolute;
+  top: 50%;
+  left: 10px; /* Adjust based on your needs */
+  transform: translateY(-50%);
+  width: 24px; /* Adjust size as needed */
+  height: 24px; /* Adjust size as needed */
+}
+
+.input-field {
+  width: 100%;
+  padding: 10px 40px 10px 40px;
+  border: 1px solid #ddd;
+  border-radius: 10px;
+  background-color: #f9f9f9;
+  cursor: text;
+  transition: background-color 0.3s ease;
+}
+
+.input-field:focus {
+  background-color: #fff;
+  outline: none;
+  box-shadow: 0 0 0 2px #007bff;
+}
+
+.animated-placeholder {
+  position: absolute;
+  top: 50%;
+  left: 40px; /* Adjust left position to account for icon width and margin */
+  transform: translateY(-50%);
+  color: #aaa;
+  /* pointer-events: none; */
+  animation: placeholderAnimation 2s infinite;
+  cursor: pointer;
+}
+
+@keyframes placeholderAnimation {
+  0%, 100% {
+    opacity: 1;
+  }
+  50% {
+    opacity: 0.5;
+  }
+}
+
+.create-button {
+  padding: 8px 12px;
+}
+

@@ -1,0 +1,144 @@
+/* .user-card {
+  display: flex;
+  align-items: center;
+  background-color: #fff;
+  border-radius: 10px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  padding: 20px;
+  margin: 0.1vh 2vh 1vh 2vh;
+  transition: box-shadow 0.3s ease;
+  flex-direction: column;
+  width: 100%;
+  max-width: 200px;
+  max-height: 250px;
+  font-family: "Monsterrat", sans-serif;
+  border: 1px solid #ddd;
+} */
+
+.card-container{
+  display: flex;
+  align-items: center;
+  background-color: #fff;
+  border-radius: 10px;
+ 
+  padding: 20px;
+  margin: 0.1vh 2vh 1vh 2vh;
+  transition: box-shadow 0.3s ease;
+  flex-direction: column;
+  width: 100%;
+  max-width: 11vw;
+  max-height: 35vh;
+  font-family: "Monsterrat", sans-serif;
+  border: 1px solid #ddd;
+}
+
+
+ 
+
+
+
+/* .user-card:hover {
+  box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+} */
+
+/* .user-dp { 
+  width: 80px;
+  height: 80px;
+  border-radius: 50%;
+  object-fit: cover;
+  margin-right: 0vw;
+  flex-shrink: 0;
+} */
+
+.user-dp {
+  width: 100px;
+  height: 100px;
+  border-radius: 50%;
+  object-fit: cover;
+  margin-right: 0;
+  flex-shrink: 0;
+  border: 1px solid gray;
+}
+
+.user-info {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  text-align:center;
+}
+
+/* .user-name {
+  font-size: 1.5em;
+  margin: 0;
+  color: #333;
+  margin-top: 10px;
+  font-weight: semibold;
+} */
+
+.user-name {
+  font-size: 1.2em;
+  margin: 0;
+  color: #333;
+  margin-top: 10px;
+  font-weight: 500; /* Use 600 for semibold */
+  text-align: center;
+}
+
+
+.default-profile {
+  width: 100px;
+  height: 100px;
+  border-radius: 50%;
+  background-color: #f0f0f0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-bottom: 1rem;
+  font-size: 0.9rem;
+  color: #888;
+  text-align: center;
+}
+
+
+/* .user-role {
+  font-size: 1em;
+  color: #555;
+  align-items: flex-start;
+  margin-left: 3vw;
+} */
+
+.user-role {
+  font-size: 1em;
+  color: #555;
+  margin: 5px 0; /* Adjust margin for spacing */
+}
+
+.notifications-link {
+  text-decoration: none;
+  color: linear-gradient(to right, #5c6bc0, #512da8);
+  font-size: 1em;
+  margin-top: 10px;
+  padding: 4px;
+  display: flex;
+  align-items: center;
+  background-color: #ccb1ff;
+  border-radius: 8px;
+}
+.notifications-link:hover {
+  box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+}
+
+.notification-count {
+  background-color: #dc3545;
+  background-color: #512da8;
+  color: #fff;
+  border-radius: 50%;
+  padding: 5px 10px;
+  margin-left: 5px;
+  font-size: 0.9em;
+}
+
+
+
+
+

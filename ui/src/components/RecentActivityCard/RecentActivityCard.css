@@ -1,0 +1,163 @@
+/* @import url("https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;500;600;700&display=swap");
+@import url("https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css");
+
+.recent-activity-card {
+  background-color: #ffffff;
+  padding: 20px;
+  border: 1px solid #e1e1e1;
+  border-radius: 8px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  width: 100%;
+  max-width: 400px;
+  margin-left: 0px;
+  font-family: "Montserrat", sans-serif;
+}
+
+.activity-list {
+  list-style: none;
+  padding: 0;
+}
+
+.activity-item {
+  padding: 8px;
+  line-height: 0.75;
+  margin-bottom: 8px;
+  border-radius: 8px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+.activity-type {
+  display: inline-block;
+  margin-bottom: 4px;
+}
+
+.badge {
+  display: inline-block;
+  padding: 5px 8px;
+  border-radius: 4px;
+  font-size: 12px;
+  font-weight: bold;
+  color: #ffffff;
+}
+
+.activity-details {
+  margin-left: 24px; /* Adjusted margin to reduce spacing */
+/* }
+
+.activity-user {
+  font-weight: bold;
+  margin-bottom: 0px; 
+}
+
+.activity-action {
+  margin-bottom: 0px; 
+}
+
+.post-title {
+  font-weight: bold;
+  margin-bottom: 0px; 
+}
+
+.comment-text {
+  color: #666666;
+  margin-bottom: 0px; 
+}
+
+.timestamp {
+  color: #999999;
+  font-size: 8px;
+  margin-top: 6px; 
+} */
+
+@import url("https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;500;600;700&display=swap");
+@import url("https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css");
+
+/* Global styles */
+body {
+  font-family: "Montserrat", sans-serif;
+  margin: 0;
+  padding: 0;
+  background-color: #f5f5f5; /* Set a light background */
+}
+
+/* Recent Activity Card */
+.recent-activity-card {
+  background-color: #ffffff;
+  padding: 2vh; /* Converted to vh */
+  border: 0.1vw solid #e1e1e1; /* Converted to vw */
+  border-radius: 0.8vh; /* Converted to vh */
+   
+  width: 100%;
+  max-width: 15vw;
+  margin-top: 0.1vh;
+}
+
+/* Activity List */
+.activity-list {
+  list-style: none;
+  padding: 0;
+}
+
+/* Activity Item */
+.activity-item {
+  padding: 0.5vh; /* Converted to vh */
+  margin-bottom: 1.2vh; /* Converted to vh */
+  background-color: #f9f9f9; /* Lighter background color */
+  border-radius: 0.8vh; /* Converted to vh */
+  box-shadow: 0 0.2vh 0.4vh rgba(0, 0, 0, 0.1); /* Converted to vh */
+  height: 14vh;
+}
+
+/* Activity Type */
+.activity-type {
+  margin-bottom: 0.8vh; /* Converted to vh */
+}
+
+/* Badges */
+.badge {
+  display: inline-block;
+  padding: 0.6vh 1vw; /* Converted to vh and vw */
+  border-radius: 0.4vh; /* Converted to vh */
+  font-size: 1.2vh; /* Converted to vh */
+  font-weight: bold;
+  color: #ffffff;
+}
+
+/* Activity Details */
+.activity-details {
+  margin-left: 0.7rem; /* Converted to vw */
+}
+
+/* Activity User */
+.activity-user {
+  font-weight: bold;
+  margin-bottom: 0.4vh; /* Converted to vh */
+}
+
+/* Activity Action */
+.activity-action {
+  margin-bottom: 0.4vh; /* Converted to vh */
+}
+
+/* Post Title */
+.post-title {
+  font-weight: bold;
+  margin-bottom: 0.4vh; /* Converted to vh */
+}
+
+/* Comment Text */
+.comment-text {
+  color: #666666;
+  margin-bottom: 0.4vh; /* Converted to vh */
+}
+
+/* Timestamp */
+.timestamp {
+  color: #999999;
+  font-size: 0.7em; /* Converted to vh */
+  margin-top: 0.8vh; /* Converted to vh */
+}
+
+#heading {
+  align-items: center;
+}

@@ -1,0 +1,344 @@
+# org: montycloud
+# app: montovoicee
+# service: montyyvoicee
+
+# provider:
+#   name: aws
+#   runtime: python3.12
+#   timeout: 30
+#   memorySize: 128
+#   vpc:
+#     securityGroupIds:
+#       - sg-0cc877fb568624f4c # Replace with your Security Group ID
+#     subnetIds:
+#       - subnet-01e4a9a44d617a4d0
+#       - subnet-0349f1f0866a0b9df
+#   iamRoleStatements:
+#     - Effect: Allow
+#       Action:
+#         - s3:PutObject
+#         - s3:GetObject
+#         - s3:HeadObject
+#         - s3:DeleteObject
+#       Resource:
+#         - arn:aws:s3:::montyvoice-backimages
+#         - arn:aws:s3:::montyvoice-backimages/*
+#     - Effect: Allow
+#       Action:
+#         - logs:CreateLogGroup
+#         - logs:CreateLogStream
+#         - logs:PutLogEvents
+#       Resource: arn:aws:logs:*:*:*
+#     - Effect: Allow
+#       Action:
+#         - sns:Publish
+#       Resource: arn:aws:sns:*:*:*
+#   - Effect: Allow
+#     Action:
+#       - ec2:CreateNetworkInterface
+#       - ec2:DescribeNetworkInterfaces
+#       - ec2:DeleteNetworkInterface
+#     Resource: "*"
+
+# functions:
+#   AuthService:
+#     handler: Auth/main.handler
+#     events:
+#       - http:
+#           path: /login
+#           method: POST
+#           cors: true
+#       - http:
+#           path: /signup
+#           method: POST
+#           cors: true
+#     timeout: 15
+#     memorySize: 128
+
+#   UserService:
+#     handler: User/main.handler
+#     events:
+#       - http:
+#           path: /users/getuserbyid/{user_id}
+#           method: get
+#           cors: true
+#       - http:
+#           path: /users/updateuser/{user_id}
+#           method: put
+#           cors: true
+#       - http:
+#           path: /users/getall/usernames
+#           method: get
+#           cors: true
+#       - http:
+#           path: /users/{user_id}/recent-activity
+#           method: get
+#           cors: true
+
+#     timeout: 15
+#     memorySize: 128
+
+#   PostsService:
+#     handler: Posts/main.handler
+#     events:
+#       - http:
+#           path: /posts/create
+#           method: POST
+#           cors: true
+#       - http:
+#           path: /posts/update/{post_id}
+#           method: PUT
+#           cors: true
+#       - http:
+#           path: /posts/delete/{post_id}
+#           method: DELETE
+#           cors: true
+#       - http:
+#           path: /posts/cheers/{user_id}
+#           method: GET
+#           cors: true
+#       - http:
+#           path: /posts/feedback/{user_id}
+#           method: GET
+#           cors: true
+#       - http:
+#           path: /posts/suggestion/{user_id}
+#           method: GET
+#           cors: true
+#     timeout: 15
+#     memorySize: 128
+
+#   RepliesService:
+#     handler: Replies/main.handler
+#     events:
+#       - http:
+#           path: /replies/create
+#           method: post
+#           cors: true
+#       - http:
+#           path: /replies/getreply/{post_id}
+#           method: get
+#           cors: true
+#       - http:
+#           path: /replies/delrep/{reply_id}
+#           method: delete
+#           cors: true
+#     timeout: 15
+#     memorySize: 128
+
+#   LikesService:
+#     handler: Like/main.handler
+#     events:
+#       - http:
+#           path: /like/{post_id}
+#           method: post
+#           cors: true
+#       - http:
+#           path: /unlike/{post_id}
+#           method: post
+#           cors: true
+#       - http:
+#           path: /like_state/{post_id}/{user_id}
+#           method: get
+#           cors: true
+#     timeout: 15
+#     memorySize: 128
+
+# custom:
+#   pythonRequirements:
+#     requirementsFile: requirements.txt
+#     concurrency: 1
+#     pipCmdExtraArgs:
+#       - "--no-cache-dir"
+#       - "--disable-pip-version-check"
+#   apigwBinary:
+#     types:
+#       - "multipart/form-data"
+
+# plugins:
+#   - serverless-python-requirements
+#   - serverless-apigw-binary
+
+# package:
+#   patterns:
+#     - "Auth/**"
+#     - "User/**"
+#     - "Posts/**"
+#     - "Replies/**"
+#     - "Like/**"
+#     - "requirements.txt"
+#   exclude:
+#     - node_modules/**
+#     - venv/**
+
+org: montycloud
+app: montovoicee
+service: montyyvoicee
+
+provider:
+  name: aws
+  runtime: python3.12
+  timeout: 30
+  memorySize: 128
+  # vpc:
+  #   securityGroupIds:
+  #     - sg-0cc877fb568624f4c # Replace with your Security Group ID
+  #   subnetIds:
+  #     - subnet-01e4a9a44d617a4d0
+  #     - subnet-0349f1f0866a0b9df # Add more subnet IDs as needed
+  iamRoleStatements:
+    - Effect: Allow
+      Action:
+        - s3:PutObject
+        - s3:GetObject
+        - s3:HeadObject
+        - s3:DeleteObject
+      Resource:
+        - arn:aws:s3:::montyvoice-backimages
+        - arn:aws:s3:::montyvoice-backimages/*
+    - Effect: Allow
+      Action:
+        - logs:CreateLogGroup
+        - logs:CreateLogStream
+        - logs:PutLogEvents
+      Resource: arn:aws:logs:*:*:*
+    - Effect: Allow
+      Action:
+        - sns:Publish
+      Resource: arn:aws:sns:*:*:*
+    # - Effect: Allow
+    #   Action:
+    #     - ec2:CreateNetworkInterface
+    #     - ec2:DescribeNetworkInterfaces
+    #     - ec2:DeleteNetworkInterface
+    #   Resource: "*"
+
+functions:
+  AuthService:
+    handler: Auth/main.handler
+    events:
+      - http:
+          path: /login
+          method: POST
+          cors: true
+      - http:
+          path: /signup
+          method: POST
+          cors: true
+    timeout: 60
+    memorySize: 512
+
+  UserService:
+    handler: User/main.handler
+    events:
+      - http:
+          path: /users/getuserbyid/{user_id}
+          method: get
+          cors: true
+      - http:
+          path: /users/updateuser/{user_id}
+          method: put
+          cors: true
+      - http:
+          path: /users/getall/usernames
+          method: get
+          cors: true
+      - http:
+          path: /users/{user_id}/recent-activity
+          method: get
+          cors: true
+    timeout: 60
+    memorySize: 512
+
+  PostsService:
+    handler: Posts/main.handler
+    events:
+      - http:
+          path: /posts/create
+          method: POST
+          cors: true
+      - http:
+          path: /posts/update/{post_id}
+          method: PUT
+          cors: true
+      - http:
+          path: /posts/delete/{post_id}
+          method: DELETE
+          cors: true
+      - http:
+          path: /posts/cheers/{user_id}
+          method: GET
+          cors: true
+      - http:
+          path: /posts/feedback/{user_id}
+          method: GET
+          cors: true
+      - http:
+          path: /posts/suggestion/{user_id}
+          method: GET
+          cors: true
+    timeout: 60
+    memorySize: 512
+
+  RepliesService:
+    handler: Replies/main.handler
+    events:
+      - http:
+          path: /replies/create
+          method: post
+          cors: true
+      - http:
+          path: /replies/getreply/{post_id}
+          method: get
+          cors: true
+      - http:
+          path: /replies/delrep/{reply_id}
+          method: delete
+          cors: true
+    timeout: 60
+    memorySize: 512
+
+  LikesService:
+    handler: Like/main.handler
+    events:
+      - http:
+          path: /like/{post_id}
+          method: post
+          cors: true
+      - http:
+          path: /unlike/{post_id}
+          method: post
+          cors: true
+      - http:
+          path: /like_state/{post_id}/{user_id}
+          method: get
+          cors: true
+    timeout: 60
+    memorySize: 512
+
+custom:
+  pythonRequirements:
+    requirementsFile: requirements.txt
+    concurrency: 1
+    pipCmdExtraArgs:
+      - "--no-cache-dir"
+      - "--disable-pip-version-check"
+  apigwBinary:
+    types:
+      - "multipart/form-data"
+
+plugins:
+  - serverless-python-requirements
+  - serverless-apigw-binary
+
+package:
+  patterns:
+    - "Auth/**"
+    - "User/**"
+    - "Posts/**"
+    - "Replies/**"
+    - "Like/**"
+    - "requirements.txt"
+  exclude:
+    - node_modules/**
+    - venv/**
